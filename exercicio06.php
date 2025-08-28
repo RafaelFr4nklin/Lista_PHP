@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercicio 01 Par ou Impar</title>
+    <title>Exercicio 06 Exibir todos os divisores de um número</title>
 </head>
 <body>
  <form method= "POST" action="">
@@ -11,17 +11,16 @@
 <!-- GET procura dados -->
  <label for="numero"> Digite um número:</label>
     <input type="numero" id="numero" name="numero" required>
-    <button type="submit" name="verificar_par_impar">Verificar</button>
+    <button type="submit" name="verificar_divisor">Verificar</button>
  </form>   
  <?php
  if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-if(isset($_POST['verificar_par_impar'])) {
+if(isset($_POST['verificar_divisor'])) {
     $numero = $_POST['numero'];
-    if($numero % 2 == 0) {
-        echo "O número $numero é <strong>par</strong>.";
-    }
-    else {
-        echo "O número $numero é <strong>impar</strong>.";
+    for($i = 1; $i <= $numero; $i++){
+        if($numero % $i == 0){
+            echo "$i são divisores = 0 <br>";
+        }
     }
 }
  }
