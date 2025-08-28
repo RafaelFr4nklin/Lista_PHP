@@ -17,14 +17,17 @@
  if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 if(isset($_POST['verificar_par_impar'])) {
     $numero = $_POST['numero'];
-    if($numero % 2 == 0) {
-        echo "O número $numero é <strong>par</strong>.";
-    }
-    else {
-        echo "O número $numero é <strong>impar</strong>.";
-    }
+       if($numero > 0){
+    echo "O número $numero é <strong>positivo</strong>.";
+}
+else if($numero <0){
+    echo "O número $numero é <strong>positivo</strong>.";
+}
+else{
+    echo "O número é <strong>zero</strong>.";
 }
  }
+}
  ?>
 </body>
 </html>
