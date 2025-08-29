@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercicio 01 Par ou Impar</title>
+    <title>Exercicio 08 pares entre 1 e o numero informado</title>
 </head>
 <body>
  <form method= "POST" action="">
@@ -17,12 +17,7 @@
  if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 if(isset($_POST['verificar_par_impar'])) {
     $numero = $_POST['numero'];
-    if($numero % 2 == 0) {
-        echo "O número $numero é <strong>par</strong>.";
-    }
-    else {
-        echo "O número $numero é <strong>impar</strong>.";
-    }
+    
 }
  }
  ?>
